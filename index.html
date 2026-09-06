@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -420,4 +420,122 @@ document.addEventListener('click', (e)=>{
 });
 </script>
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday My Love ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      color: #ff3366;
+      margin-top: 40px;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .heart {
+      font-size: 4em;
+      color: red;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .question {
+      margin: 30px;
+      font-size: 1.4em;
+    }
+    .option {
+      background: #ff3366;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .option:hover {
+      background: #ff6699;
+    }
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 50px;
+      height: 70px;
+      background: pink;
+      border-radius: 50%;
+      animation: float 10s infinite;
+      cursor: pointer;
+    }
+    @keyframes float {
+      0% { bottom: -100px; }
+      100% { bottom: 100%; }
+    }
+    #surprise {
+      display: none;
+      font-size: 2em;
+      color: #ff3366;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Happy Birthday, My Love 🎂</h1>
+  <p>You make my world brighter, funnier, and full of love 💕</p>
+  <div class="heart">❤️</div>
+
+  <!-- Funny Question -->
+  <div class="question">
+    <p>How many times do I love you?</p>
+    <button class="option" onclick="wrongAnswer()">10</button>
+    <button class="option" onclick="wrongAnswer()">100</button>
+    <button class="option" onclick="rightAnswer()">Infinite 💖</button>
+  </div>
+
+  <!-- Surprise Message -->
+  <div id="surprise">You are my forever gift 💕</div>
+
+  <!-- Balloons -->
+  <div class="balloon" style="left:20%;" onclick="popBalloon(this)"></div>
+  <div class="balloon" style="left:50%;" onclick="popBalloon(this)"></div>
+  <div class="balloon" style="left:70%;" onclick="popBalloon(this)"></div>
+
+  <script>
+    function wrongAnswer() {
+      alert("Oops! Try again 😜");
+    }
+    function rightAnswer() {
+      document.getElementById("surprise").style.display = "block";
+      alert("Correct! Love is Infinite 💖");
+    }
+    function popBalloon(balloon) {
+      balloon.style.display = "none";
+      alert("Pop! 🎈");
+    }
+    // Timed reveal
+    setTimeout(() => {
+      alert("Surprise! You are my forever love 💖");
+    }, 5000);
+  </script>
+
+  <p style="margin-top:50px;">Made with ❤️ by Vipul</p>
+</body>
 </html>
+
